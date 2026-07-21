@@ -1,0 +1,286 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hello", "Hi", "Hey there", "Good morning", "Good afternoon",
+        "Good evening", "Howdy", "What's up", "Sup", "Greetings",
+        "Hi there", "Hey", "Yo", "Hello bot", "Hey bot"
+      ],
+      "responses": [
+        "Hello! How can I assist you today? 😊",
+        "Hi there! What can I do for you?",
+        "Hey! Great to see you. How can I help?",
+        "Greetings! I'm here to help you."
+      ]
+    },
+    {
+      "tag": "farewell",
+      "patterns": [
+        "Goodbye", "Bye", "See you later", "See ya", "Farewell",
+        "Take care", "Good night", "Catch you later", "Bye bye",
+        "I'm leaving", "Gotta go", "Talk to you later", "Quit", "Exit"
+      ],
+      "responses": [
+        "Goodbye! Have a wonderful day! 👋",
+        "See you later! Take care!",
+        "Bye! Don't hesitate to come back if you need help.",
+        "Farewell! It was great talking to you."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thank you", "Thanks", "Thanks a lot", "Thank you so much",
+        "Many thanks", "Much appreciated", "Cheers", "Ty",
+        "That was helpful", "You're great", "Awesome help", "Perfect, thanks"
+      ],
+      "responses": [
+        "You're welcome! 😊",
+        "Happy to help! Is there anything else?",
+        "Anytime! That's what I'm here for.",
+        "Glad I could help! Feel free to ask more."
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "Help me", "I need help", "Can you help", "What can you do",
+        "What are your features", "How do you work", "Help",
+        "Tell me about yourself", "What do you know", "What can I ask you"
+      ],
+      "responses": [
+        "I'm a multilingual chatbot! I can chat with you in English, Hindi, and Kannada. Ask me about weather, jokes, facts, health tips, and more!",
+        "I can help you with: 💬 Casual conversation, 🌍 Language switching (English/Hindi/Kannada), 😄 Jokes and fun facts, 💡 General knowledge, ❤️ Health and wellness tips."
+      ]
+    },
+    {
+      "tag": "about_bot",
+      "patterns": [
+        "Who are you", "What are you", "Tell me about you",
+        "Are you a robot", "Are you AI", "Are you human",
+        "What is your name", "Your name please", "Introduce yourself"
+      ],
+      "responses": [
+        "I'm LinguaBot — an AI-powered multilingual chatbot built with TensorFlow and Flask. I speak English, Hindi (हिन्दी), and Kannada (ಕನ್ನಡ)! 🤖",
+        "I'm LinguaBot! I use deep learning (Bidirectional LSTM) to understand your intent and respond intelligently in 3 languages."
+      ]
+    },
+    {
+      "tag": "joke",
+      "patterns": [
+        "Tell me a joke", "Make me laugh", "Say something funny",
+        "Joke please", "I need a laugh", "Entertain me",
+        "Do you know any jokes", "Funny joke", "Give me a joke"
+      ],
+      "responses": [
+        "Why don't scientists trust atoms? Because they make up everything! 😄",
+        "I told my computer I needed a break. Now it won't stop sending me Kit-Kat ads. 🍫",
+        "Why do programmers prefer dark mode? Because light attracts bugs! 🐛",
+        "What do you call a fake noodle? An Impasta! 🍝",
+        "Why did the math book look so sad? Because it had too many problems! 📚"
+      ]
+    },
+    {
+      "tag": "weather",
+      "patterns": [
+        "What's the weather", "How's the weather today", "Weather forecast",
+        "Is it going to rain", "Should I carry an umbrella",
+        "What is the temperature", "How hot is it", "Current weather"
+      ],
+      "responses": [
+        "I can't access real-time weather data, but you can check https://weather.com or Google 'weather [your city]' for the latest forecast! 🌤️",
+        "For live weather updates, try asking your phone's assistant or visit weather.com. I hope it's sunny where you are! ☀️"
+      ]
+    },
+    {
+      "tag": "time",
+      "patterns": [
+        "What time is it", "What's the time", "Current time",
+        "Tell me the time", "Time please", "Do you know the time"
+      ],
+      "responses": [
+        "I don't have real-time access, but your device's clock is always accurate! 🕐",
+        "Check the clock on your device for the exact time! ⏰"
+      ]
+    },
+    {
+      "tag": "date",
+      "patterns": [
+        "What is today's date", "What's the date today", "Today's date",
+        "What day is today", "What month is it", "What year is it"
+      ],
+      "responses": [
+        "I don't have real-time access to the calendar, but you can check your device for today's date! 📅",
+        "Your device's calendar will have today's date. Hope it's a great day! 🗓️"
+      ]
+    },
+    {
+      "tag": "health",
+      "patterns": [
+        "Health tips", "How to stay healthy", "Fitness advice",
+        "Diet tips", "Exercise tips", "Healthy habits",
+        "How to be healthy", "Wellness tips", "Nutrition advice"
+      ],
+      "responses": [
+        "Great health habits: 🥗 Eat balanced meals, 💧 Drink 8 glasses of water daily, 🏃 Exercise 30 min/day, 😴 Get 7-8 hours of sleep, 🧘 Practice mindfulness.",
+        "Top wellness tips: Stay hydrated, eat more vegetables and fruits, take regular walks, limit screen time, and don't skip sleep! 💪"
+      ]
+    },
+    {
+      "tag": "education",
+      "patterns": [
+        "Learning tips", "How to study better", "Study advice",
+        "How to learn faster", "Best way to study", "Memory tips",
+        "How to concentrate", "Improve focus", "Study techniques"
+      ],
+      "responses": [
+        "Top study tips: 📚 Use the Pomodoro technique (25 min study, 5 min break), practice active recall, teach what you learn, get enough sleep before exams, and stay consistent!",
+        "Learning hacks: Spaced repetition works great for memory. Apps like Anki can help. Also, try explaining concepts in your own words — if you can teach it, you know it! 🎓"
+      ]
+    },
+    {
+      "tag": "technology",
+      "patterns": [
+        "Tell me about AI", "What is machine learning", "What is deep learning",
+        "Tell me about technology", "Latest tech", "What is Python",
+        "What is neural network", "Explain AI", "Future of technology"
+      ],
+      "responses": [
+        "AI (Artificial Intelligence) is the simulation of human intelligence in machines. Machine Learning is a subset where computers learn from data. Deep learning uses neural networks with many layers — that's how I work! 🤖",
+        "Technology is evolving rapidly! AI, quantum computing, blockchain, and AR/VR are shaping the future. What specific technology would you like to know about?"
+      ]
+    },
+    {
+      "tag": "happy",
+      "patterns": [
+        "I am happy", "I feel great", "I'm excited", "I'm feeling awesome",
+        "Life is great", "I'm so glad", "I love today", "Best day ever",
+        "I'm thrilled", "Feeling on top of the world"
+      ],
+      "responses": [
+        "That's wonderful to hear! 🎉 Happiness is contagious — keep spreading the good vibes!",
+        "Yay! 😄 I'm happy that you're happy! What's making your day so great?",
+        "Awesome! Positive energy is the best. Keep smiling! 😊"
+      ]
+    },
+    {
+      "tag": "sad",
+      "patterns": [
+        "I am sad", "I feel bad", "I'm feeling down", "I'm depressed",
+        "Life is tough", "I'm not feeling well", "I feel lonely",
+        "Nothing is going right", "I'm upset", "I feel terrible"
+      ],
+      "responses": [
+        "I'm sorry to hear that. 😢 Remember, tough times don't last. It's okay to feel this way — things will get better. Would you like to talk about it?",
+        "Sending you virtual hugs! 🤗 Remember that you're stronger than you think. Take things one step at a time.",
+        "I'm here for you. Sometimes just talking helps. What's on your mind?"
+      ]
+    },
+    {
+      "tag": "facts",
+      "patterns": [
+        "Tell me a fact", "Give me a fun fact", "Interesting fact",
+        "Did you know", "Random fact", "Something interesting",
+        "Amaze me", "Surprise me with a fact"
+      ],
+      "responses": [
+        "🌊 Fun fact: The ocean covers 71% of Earth's surface but 95% remains unexplored!",
+        "🧠 Fun fact: Your brain generates about 70,000 thoughts per day!",
+        "🐙 Fun fact: Octopuses have three hearts and blue blood!",
+        "⚡ Fun fact: Lightning strikes Earth about 100 times every second!",
+        "🦋 Fun fact: Butterflies taste with their feet — they have taste sensors there!"
+      ]
+    },
+    {
+      "tag": "compliment",
+      "patterns": [
+        "You are amazing", "You're great", "You're awesome", "Good job",
+        "You're smart", "I love you", "You're the best", "Well done"
+      ],
+      "responses": [
+        "Aww, thank you! 😊 You're amazing too!",
+        "That really makes my circuits happy! 🤖 Thank you!",
+        "You're too kind! Keep being awesome! ✨"
+      ]
+    },
+    {
+      "tag": "food",
+      "patterns": [
+        "Suggest a recipe", "What should I eat", "Healthy food ideas",
+        "Best Indian food", "What's a good meal", "Food recommendation",
+        "Tell me about food", "Cooking tips", "Meal ideas"
+      ],
+      "responses": [
+        "🍛 Try a classic Dal Tadka with rice — nutritious, delicious, and easy to make! Or how about a fresh vegetable stir-fry with tofu?",
+        "🥗 For a quick healthy meal: Greek salad with olive oil, or an avocado toast with eggs! What cuisine do you prefer — Indian, Mediterranean, or something else?"
+      ]
+    },
+    {
+      "tag": "motivation",
+      "patterns": [
+        "Motivate me", "I need motivation", "Give me inspiration",
+        "I want to give up", "Inspire me", "Encourage me",
+        "I'm feeling lazy", "Push me", "Words of wisdom"
+      ],
+      "responses": [
+        "💪 'The secret of getting ahead is getting started.' — Mark Twain. You've got this!",
+        "🌟 Every expert was once a beginner. Keep going — your future self will thank you!",
+        "🚀 'It does not matter how slowly you go as long as you do not stop.' — Confucius. Keep moving forward!"
+      ]
+    },
+    {
+      "tag": "news",
+      "patterns": [
+        "Latest news", "What's happening", "Current events",
+        "Today's news", "World news", "Tell me the news"
+      ],
+      "responses": [
+        "I don't have access to live news, but you can check BBC, CNN, or The Hindu for the latest updates! 📰",
+        "For breaking news, try Google News or your local news app. I can discuss topics you've read about though! 🗞️"
+      ]
+    },
+    {
+      "tag": "language_switch_hindi",
+      "patterns": [
+        "Switch to Hindi", "Talk in Hindi", "Speak Hindi",
+        "Hindi please", "Change language to Hindi", "हिन्दी में बात करें"
+      ],
+      "responses": [
+        "बिल्कुल! अब हम हिन्दी में बात करेंगे। आपकी कैसे सहायता करूँ? 😊",
+        "ज़रूर! हिन्दी में स्वागत है। आप क्या जानना चाहते हैं?"
+      ]
+    },
+    {
+      "tag": "language_switch_kannada",
+      "patterns": [
+        "Switch to Kannada", "Talk in Kannada", "Speak Kannada",
+        "Kannada please", "Change language to Kannada", "ಕನ್ನಡದಲ್ಲಿ ಮಾತಾಡಿ"
+      ],
+      "responses": [
+        "ಖಂಡಿತ! ಈಗ ನಾವು ಕನ್ನಡದಲ್ಲಿ ಮಾತನಾಡೋಣ. ನಿಮಗೆ ಹೇಗೆ ಸಹಾಯ ಮಾಡಲಿ? 😊",
+        "ಅವಶ್ಯ! ಕನ್ನಡಕ್ಕೆ ಸ್ವಾಗತ. ನೀವು ಏನು ಕೇಳಲು ಬಯಸುತ್ತೀರಿ?"
+      ]
+    },
+    {
+      "tag": "language_switch_english",
+      "patterns": [
+        "Switch to English", "Talk in English", "English please",
+        "Change to English", "Back to English"
+      ],
+      "responses": [
+        "Sure! Back to English. How can I help you? 😊",
+        "Switching to English! What would you like to know?"
+      ]
+    },
+    {
+      "tag": "fallback",
+      "patterns": [],
+      "responses": [
+        "I'm not sure I understood that. Could you rephrase? 🤔",
+        "Hmm, I didn't quite catch that. Could you say it differently?",
+        "I'm still learning! Could you ask in a different way?"
+      ]
+    }
+  ]
+}

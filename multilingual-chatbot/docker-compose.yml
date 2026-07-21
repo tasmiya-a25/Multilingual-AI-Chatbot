@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  chatbot:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - HOST=0.0.0.0
+      - DEBUG=False
+    volumes:
+      # Mount model directory to persist trained models
+      - ./model/saved_models:/app/model/saved_models
+    restart: always

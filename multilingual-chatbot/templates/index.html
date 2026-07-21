@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LinguaBot - Multi-Lingual AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Socket.IO -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.1/socket.io.min.js"></script>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fa-solid fa-robot"></i>
+                    <span>LinguaBot</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-menu">
+                <button class="menu-btn active" id="newChatBtn">
+                    <i class="fa-solid fa-plus"></i> New Chat
+                </button>
+                <button class="menu-btn" id="clearHistoryBtn">
+                    <i class="fa-solid fa-trash-can"></i> Clear History
+                </button>
+            </div>
+            
+            <div class="language-selection">
+                <h3>Languages Supported</h3>
+                <div class="lang-pill"><span class="flag">🇺🇸</span> English (en)</div>
+                <div class="lang-pill"><span class="flag">🇮🇳</span> हिन्दी (hi)</div>
+                <div class="lang-pill"><span class="flag">🇮🇳</span> ಕನ್ನಡ (kn)</div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="tech-stack">Powered by TensorFlow & Flask</div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-main">
+            <!-- Header -->
+            <header class="chat-header">
+                <div class="header-info">
+                    <h2>LinguaBot</h2>
+                    <span class="status-indicator">
+                        <span class="status-dot online" id="connectionDot"></span>
+                        <span id="connectionText">Connected</span>
+                    </span>
+                </div>
+                <div class="header-actions">
+                    <div class="lang-selector-wrapper">
+                        <select id="langSelector" class="lang-selector">
+                            <option value="auto">🌐 Auto Detect</option>
+                            <option value="en">🇺🇸 English</option>
+                            <option value="hi">🇮🇳 हिन्दी</option>
+                            <option value="kn">🇮🇳 ಕನ್ನಡ</option>
+                        </select>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Chat Messages -->
+            <div class="chat-container" id="chatContainer">
+                <div class="welcome-screen" id="welcomeScreen">
+                    <div class="welcome-icon"><i class="fa-solid fa-robot"></i></div>
+                    <h1>Welcome to LinguaBot</h1>
+                    <p>I can understand and reply in English, Hindi, and Kannada. Try asking me a question or tell me a joke!</p>
+                    
+                    <div class="suggestion-chips">
+                        <button class="chip" onclick="sendSuggestedMessage('Tell me a joke')">Tell me a joke 🇺🇸</button>
+                        <button class="chip" onclick="sendSuggestedMessage('मुझे एक चुटकुला सुनाओ')">मुझे एक चुटकुला सुनाओ 🇮🇳</button>
+                        <button class="chip" onclick="sendSuggestedMessage('ನನ್ನನ್ನು ನಗಿಸಿ')">ನನ್ನನ್ನು ನಗಿಸಿ 🇮🇳</button>
+                        <button class="chip" onclick="sendSuggestedMessage('What is AI?')">What is AI? 🇺🇸</button>
+                    </div>
+                </div>
+                
+                <div class="messages-wrapper" id="messagesWrapper">
+                    <!-- Messages will be injected here -->
+                </div>
+                
+                <!-- Typing Indicator -->
+                <div class="typing-indicator hidden" id="typingIndicator">
+                    <div class="message bot">
+                        <div class="avatar"><i class="fa-solid fa-robot"></i></div>
+                        <div class="bubble typing-bubble">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <form id="chatForm" class="chat-form">
+                    <button type="button" class="btn-icon" id="voiceBtn" title="Voice Input (English only)">
+                        <i class="fa-solid fa-microphone"></i>
+                    </button>
+                    <div class="input-wrapper">
+                        <input type="text" id="messageInput" placeholder="Type a message... (Auto-detects language)" autocomplete="off">
+                    </div>
+                    <button type="submit" class="btn-send" id="sendBtn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/static/js/ui.js"></script>
+    <script src="/static/js/chat.js"></script>
+</body>
+</html>
